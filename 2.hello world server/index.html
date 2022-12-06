@@ -23,7 +23,9 @@
     function getWeather()
     {
         let cityName = document.querySelector("#cityName").value;
-        axios.get('http:localhost:3000/weather')
+        //https://my-weatherapp-online.herokuapp.com/weather
+        axios.get('https://my-weatherapp-online.herokuapp.com/weather')
+        //axios.get('http:localhost:3000/weather')
          .then(function(response){
             let data = response.data;
             document.querySelector("#result").innerHTML=data.weather;
